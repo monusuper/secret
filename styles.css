@@ -11,7 +11,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url('hbd1.png');
+  background-image: url('image.png');
   background-size: cover;
   background-position: center;
   filter: blur(10px);
