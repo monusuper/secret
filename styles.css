@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #b3d9ff;
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('hbd1.png');
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px);
+  transition: filter 1s ease;
+  position: relative;
+}
+
+.birthday-container {
+  text-align: center;
+}
+
+.pfp {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+#start-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #e600ad;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  z-index: 10; /* Ensure the button stays on top */
+  filter: none; /* Prevent blur on the button */
+}
+
+#start-button:hover {
+  transform: scale(1.1);
+}
+
+.hidden {
+  display: none;
+}
+
+.birthday-text {
+  font-size: 48px;
+  color: #e600ad;
+  margin: 20px 0 10px;
+}
+
+.wish-text {
+  font-size: 18px;
+  color: #e600ad;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Adds a subtler 3D effect */
+  font-weight: bold; /* Enhances text visibility */
+}
+
+.confetti {
+  position: fixed;
+  top: -10px; /* Start above the viewport */
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  animation: fall linear infinite;
+  border-radius: 50%;
+  pointer-events: none; /* Prevent interaction with confetti */
+  z-index: 1;
+  font-size: 48px;
+  color: #0080ff;
+  margin: 20px 0 10px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Adds 3D shadow effect */
+  font-weight: bold; /* Makes the text stand out more */
+}
+
+@keyframes fall {
+  0% {
+    top: -10px;
+  }
+  100% {
+    top: 100vh; /* Falls to the bottom of the viewport */
+  }
+}
+
+.pfp {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.8); /* Shadowy blur for 3D effect */
+  filter: blur(5px); /* Adds a slight blur around the profile picture */
+  opacity: 0; /* Initially hide the pfp */
+  transition: all 0.5s ease-in-out; /* Smoothly reveal and adjust effects */
+}
+
+.pfp.visible {
+  opacity: 1; /* Makes pfp visible */
+  filter: none; /* Removes blur when shown */
+  transform: scale(1.05); /* Slightly enlarges for 3D pop */
+}
